@@ -1,0 +1,11 @@
+0    2015-07-07 18:36:39,851 [INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@39c0f4a: startup date [Tue Jul 07 18:36:39 CEST 2015]; root of context hierarchy
+ 199  2015-07-07 18:36:40,050 [INFO ]  Loading XML bean definitions from class path resource [beans.xml]
+ 636  2015-07-07 18:36:40,487 [INFO ]  Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@10e41621: defining beans [Application,Webserver,NTPTimeProvider,Recuperation]; root of factory hierarchy
+ 812  2015-07-07 18:36:40,663 [ERROR]  [Ljava.lang.StackTraceElement;@1573f9fc
+ 1031 2015-07-07 18:36:40,882 [INFO ]  Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@10e41621: defining beans [Application,Webserver,NTPTimeProvider,Recuperation]; root of factory hierarchy
+ 0    2015-07-07 18:47:58,146 [INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@39c0f4a: startup date [Tue Jul 07 18:47:58 CEST 2015]; root of context hierarchy
+ 195  2015-07-07 18:47:58,341 [INFO ]  Loading XML bean definitions from class path resource [beans.xml]
+ 654  2015-07-07 18:47:58,800 [INFO ]  Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@10e41621: defining beans [Application,Webserver,NTPTimeProvider,Recuperation]; root of factory hierarchy
+ 833  2015-07-07 18:47:58,979 [ERROR]  [Ljava.lang.StackTraceElement;@1573f9fc
+ 1081 2015-07-07 18:47:59,227 [INFO ]  Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@10e41621: defining beans [Application,Webserver,NTPTimeProvider,Recuperation]; root of factory hierarchy
+ 

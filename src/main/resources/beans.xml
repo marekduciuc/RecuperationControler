@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<context:annotation-config />
+	<bean id="Application" class="recuperationControler.App">
+		<constructor-arg index="0" ref="NTPTimeProvider" />
+		<constructor-arg index="1" ref="Recuperation" />
+	</bean>
+
+	
+	<bean id="ActualInnerDAO" class="recuperationControler.siemence.DataPointDAO">
+		<constructor-arg index="0" ref="Webserver" />
+		<constructor-arg index="1" ref="ActualInnerTMP" />
+	</bean>
+	<bean id="ActualInnerTMP" class="recuperationControler.siemence.DataPoint">
+		<constructor-arg index="0" ref="1194" />
+		<constructor-arg index="1" ref="Actual Innter Temperature" />
+		<constructor-arg index="2" ref="float" />
+	</bean>
+	
+	<bean id="ComfortInnerDAO" class="recuperationControler.siemence.DataPointDAO">
+		<constructor-arg index="0" ref="Webserver" />
+		<constructor-arg index="1" ref="ComfortInnerTMP" />
+	</bean>
+	<bean id="ComfortInnerTMP" class="recuperationControler.siemence.DataPoint">
+		<constructor-arg index="0" ref="1195" />
+		<constructor-arg index="1" ref="Comfort Innter Temperature" />
+		<constructor-arg index="2" ref="float" />
+	</bean>
+	
+	<bean id="ActualOutDAO" class="recuperationControler.siemence.DataPointDAO">
+		<constructor-arg index="0" ref="Webserver" />
+		<constructor-arg index="1" ref="ActualOutTMP" />
+	</bean>
+	<bean id="ActualOutTMP" class="recuperationControler.siemence.DataPoint">
+		<constructor-arg index="0" ref="1295" />
+		<constructor-arg index="1" ref="Actual outdoor Temperature" />
+		<constructor-arg index="2" ref="float" />
+	</bean>
+	
+	
+	<bean id="Webserver" class="recuperationControler.siemence.WebServer"
+		scope="singleton">
+		<constructor-arg index="0"  type="java.lang.String"  value="192.168.0.2:" />
+		<constructor-arg index="1"  type="java.lang.String"  value="Administrator" />
+		<constructor-arg index="2"  type="java.lang.String"  value="password" />
+	</bean>
+
+	<bean id="NTPTimeProvider" class="recuperationControler.timeProvider.NTPTimeProvider"
+		scope="singleton">
+		<constructor-arg index="0" type="java.util.List">
+			<list>
+				<value>0.cz.pool.ntp.org</value>
+				<value>2.ch.pool.ntp.org</value>
+				<value>1.cz.pool.ntp.org</value>
+				<value>2.cz.pool.ntp.org</value>
+			</list>
+		</constructor-arg>
+	</bean>
+
+	<bean id="Recuperation" class="recuperationControler.Recuperation">
+		<constructor-arg index="0" type="int" value="3600" />
+		<constructor-arg index="1" type="int" value="600" />
+	</bean>
+
+</beans>

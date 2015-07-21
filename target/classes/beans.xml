@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="Application" class="recuperationControler.App">
+		<constructor-arg index="0" ref="Webserver" />
+		<constructor-arg index="1" ref="NTPTimeProvider" />
+		<constructor-arg index="2" ref="Recuperation" />
+	</bean>
+
+	<bean id="Webserver" class="recuperationControler.siemence.WebServer"
+		scope="singleton">
+		<constructor-arg index="0"  type="java.lang.String"  value="192.168.0.2:" />
+		<constructor-arg index="1"  type="java.lang.String"  value="Administrator" />
+		<constructor-arg index="2"  type="java.lang.String"  value="password" />
+	</bean>
+
+	<bean id="NTPTimeProvider" class="recuperationControler.timeProvider.NTPTimeProvider"
+		scope="singleton">
+		<constructor-arg index="0" type="java.util.List">
+			<list>
+				<value>0.cz.pool.ntp.org</value>
+				<value>2.ch.pool.ntp.org</value>
+				<value>1.cz.pool.ntp.org</value>
+				<value>2.cz.pool.ntp.org</value>
+			</list>
+		</constructor-arg>
+	</bean>
+
+	<bean id="Recuperation" class="recuperationControler.Recuperation">
+		<constructor-arg index="0" type="int" value="3600" />
+		<constructor-arg index="1" type="int" value="600" />
+	</bean>
+
+</beans>

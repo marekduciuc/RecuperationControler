@@ -1,0 +1,5 @@
+0    2015-07-20 23:53:36,044 [INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@46ee7fe8: startup date [Mon Jul 20 23:53:36 CEST 2015]; root of context hierarchy
+ 67   2015-07-20 23:53:36,111 [INFO ]  Loading XML bean definitions from class path resource [beans.xml]
+ 1257 2015-07-20 23:53:37,301 [INFO ]  Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@2d3fcdbd: defining beans [Application,Webserver,NTPTimeProvider,Recuperation]; root of factory hierarchy
+ 1537 2015-07-20 23:53:37,581 [INFO ]  Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@2d3fcdbd: defining beans [Application,Webserver,NTPTimeProvider,Recuperation]; root of factory hierarchy
+ 
