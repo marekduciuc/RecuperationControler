@@ -1,9 +1,7 @@
 package recuperationControler.configuration;
 
+import java.math.BigDecimal;
 import java.util.Date;
-
-import recuperationControler.PowerLevel;
-import recuperationControler.PrecoolingMode;
 
 public class ConfiguarationPOJO {
 
@@ -27,13 +25,10 @@ public class ConfiguarationPOJO {
 	 * */
 	private long  level3cycleDuration;	
 	
-	/**  
-	 * How long shoudl be 1 precooling cycle
-	 * */
-	private long  preCoolingcycleDuration;
+	
 	
 	/**  
-	 * What is minimal temperature to beprecooling active
+	 * Precooling will not start / will be stoped if outdoor temp goes under this temperature;
 	 * */
 	private float minOutdoorTemp;
 	
@@ -50,7 +45,7 @@ public class ConfiguarationPOJO {
 	/**
 	 * If ther is 
 	 */
-	private byte precolingModeSwitchTempDifference; 
+	private int precolingModeSwitchTempDifference; 
 	
 	/**  
 	 * What what should be temperature difference for precooling to stop. 
@@ -60,8 +55,15 @@ public class ConfiguarationPOJO {
 	private float preCoolingTempDiference;
 	
 	
-	public Configuaration() {
-		// TODO Auto-generated constructor stub
+	private void ConfiguarationPOJO() {
+	}
+	
+	 private static class SingletonHolder { 
+		    private static final ConfiguarationPOJO INSTANCE = new ConfiguarationPOJO();
+	 }
+	
+	public static ConfiguarationPOJO getInstance(){
+		return SingletonHolder.INSTANCE;
 	}
 
 
@@ -105,16 +107,6 @@ public class ConfiguarationPOJO {
 	}
 
 
-	public long getPreCoolingcycleDuration() {
-		return preCoolingcycleDuration;
-	}
-
-
-	public void setPreCoolingcycleDuration(long preCoolingcycleDuration) {
-		this.preCoolingcycleDuration = preCoolingcycleDuration;
-	}
-
-
 	public float getMinOutdoorTemp() {
 		return minOutdoorTemp;
 	}
@@ -145,13 +137,13 @@ public class ConfiguarationPOJO {
 	}
 
 
-	public byte getPrecolingModeSwitchTempDifference() {
+	public int getPrecolingModeSwitchTempDifference() {
 		return precolingModeSwitchTempDifference;
 	}
 
 
 	public void setPrecolingModeSwitchTempDifference(
-			byte precolingModeSwitchTempDifference) {
+			int precolingModeSwitchTempDifference) {
 		this.precolingModeSwitchTempDifference = precolingModeSwitchTempDifference;
 	}
 
