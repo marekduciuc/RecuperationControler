@@ -31,13 +31,20 @@ Onec i s button presed then recuperation will start working on 2nd or 3rd power 
 
 ## Technical specification
 
-* All settings needs to be adjitable onfly without stoping application idelay thru web but property file woudl be sufficient for start
-* Application will run on RaspberyPi by and will NOT use database
-* All Temparature imouts will be read from OZWx72 siemence webserver [webserver] thru WEB API
+* All settings needs to be adjustable on fly without stopping application idealy thru web but property file would be sufficient for start
+* Application will run on RaspberyPi by and will **NOT** use database
+* All Temparature imputs will be read from OZWx72 siemence webserver [webserver] thru WEB API
 * it will not be possibele to change data on webserver
 * It is possible to set frequency of temperature reads
-* It id possibel to set precooling factor in C
-* It is possibel to set Ventilation lenght
+* It id possible to set precooling factor in C
+* It is possible to set Ventilation length
+
+### Parameters djustabel by user
+* Precooling factor
+* Precooling ventilation level 2/3
+* Precoolign ventilation mode 1levle mode or 2 levels mode
+
+
 
 
 
