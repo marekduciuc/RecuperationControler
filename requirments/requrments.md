@@ -3,7 +3,7 @@
 ## Usecases
 
 ###Precoling:
-Durig precoolig Recuperation is running on 2nd or 3rd power level depends on current setting. Possible woudl be also that it will start on 3rd power level and switch to 2nd after reaching comrotable temperature.
+Durnig precoolig Recuperation is running on 2nd or 3rd power level depends on current setting. Possible woudl be also that it will start on 3rd power level and switch to 2nd after reaching comrotable temperature.
 	
 	
 #####No precoling due to highe temp outside	
