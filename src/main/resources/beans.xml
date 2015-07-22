@@ -11,7 +11,7 @@
 
 	
 	<bean id="ActualInnerDAO" class="recuperationControler.siemence.DataPointDAO">
-		<constructor-arg index="0" ref="Webserver" />
+		<constructor-arg index="0" ref="RegulationDataProvider" />
 		<constructor-arg index="1" ref="ActualInnerTMP" />
 	</bean>
 	<bean id="ActualInnerTMP" class="recuperationControler.siemence.DataPoint">
@@ -21,7 +21,7 @@
 	</bean>
 	
 	<bean id="ComfortInnerDAO" class="recuperationControler.siemence.DataPointDAO">
-		<constructor-arg index="0" ref="Webserver" />
+		<constructor-arg index="0" ref="RegulationDataProvider" />
 		<constructor-arg index="1" ref="ComfortInnerTMP" />
 	</bean>
 	<bean id="ComfortInnerTMP" class="recuperationControler.siemence.DataPoint">
@@ -31,7 +31,7 @@
 	</bean>
 	
 	<bean id="ActualOutDAO" class="recuperationControler.siemence.DataPointDAO">
-		<constructor-arg index="0" ref="Webserver" />
+		<constructor-arg index="0" ref="RegulationDataProvider" />
 		<constructor-arg index="1" ref="ActualOutTMP" />
 	</bean>
 	<bean id="ActualOutTMP" class="recuperationControler.siemence.DataPoint">
@@ -41,7 +41,7 @@
 	</bean>
 	
 	
-	<bean id="Webserver" class="recuperationControler.siemence.WebServer"
+	<bean id="RegulationDataProvider" class="recuperationControler.siemence.RegulationDataProvider"
 		scope="singleton">
 		<constructor-arg index="0"  type="java.lang.String"  value="192.168.0.2" />
 <!-- Use this if you are running from outside  -->

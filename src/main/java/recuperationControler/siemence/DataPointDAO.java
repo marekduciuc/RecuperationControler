@@ -2,10 +2,10 @@ package recuperationControler.siemence;
 
 
 public class DataPointDAO {
-	private WebServer webServer;
+	private RegulationDataProvider webServer;
 	private DataPoint datapoint;
 	
-	public DataPointDAO(WebServer webServer, DataPoint datapoint) {
+	public DataPointDAO(RegulationDataProvider webServer, DataPoint datapoint) {
 		this.webServer = webServer;
 		this.datapoint = datapoint;		
 	}
