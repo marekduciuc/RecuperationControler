@@ -2,7 +2,7 @@ package recuperationControler;
 
 import java.util.Date;
 
-public class Configuaration {
+public class ConfiguarationPOJO {
 
 	/**  
 	 * jobFrequency how often should be checked temperature 
