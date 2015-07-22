@@ -43,7 +43,9 @@
 	
 	<bean id="Webserver" class="recuperationControler.siemence.WebServer"
 		scope="singleton">
-		<constructor-arg index="0"  type="java.lang.String"  value="192.168.0.2:" />
+		<constructor-arg index="0"  type="java.lang.String"  value="192.168.0.2" />
+<!-- Use this if you are running from outside  -->
+<!-- 		<constructor-arg index="0"  type="java.lang.String"  value="46.174.56.18:40002" /> -->
 		<constructor-arg index="1"  type="java.lang.String"  value="Administrator" />
 		<constructor-arg index="2"  type="java.lang.String"  value="password" />
 	</bean>
